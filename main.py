@@ -8,7 +8,8 @@ on = True
 def encode_morse_code(phrase):
     for letter in phrase:
         try:
-            code.append(morse_code_list[letter])
+            decode_letter = letter.lower()
+            code.append(morse_code_list[decode_letter])
         except KeyError:
             pass
     return ','.join(code)
